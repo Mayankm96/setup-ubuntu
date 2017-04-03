@@ -104,11 +104,11 @@ echo "Installing OpenCV 3.0.0-beta" $'\n'
 sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
-cd ~/tmp
+cd /tmp
 git clone https://github.com/Itseez/opencv.git
-cmake ~/tmp/opencv
-mkdir -p ~/tmp/opencv/release
-cd ~/tmp/opencv/release
+cmake /tmp/opencv
+mkdir -p /tmp/opencv/release
+cd /tmp/opencv/release
 cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
 make -j8 # -j8 runs 8 jobs in parallel.
          # Change 8 to number of hardware threads available.
