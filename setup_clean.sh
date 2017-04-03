@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# A script made to install all the packages and softwares, I require after a clean install of Ubuntu OS. 
-# 
+# A script made to install all the packages and softwares, frequently required after a clean install of Ubuntu OS. 
+
 
 ROS_DISTRO = $'kinetic'
 git_username = $'Mayankm96'
@@ -66,6 +66,11 @@ sudo apt-get install python-rosinstall
 echo $'\n'
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 echo $'\n'
+
+
+# setup Gazebo
+echo "Installing Gazebo" $'\n'
+curl -ssL http://get.gazebosim.org | sh
 
 # setup arduino
 echo "Installing Arduino and rosserial-arduino" $'\n'
