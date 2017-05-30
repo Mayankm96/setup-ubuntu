@@ -2,14 +2,34 @@
 
 # A script made to install all the packages and softwares, frequently required after a clean install of Ubuntu OS. 
 
+echo -e "Enter your github user.name: "
+read git_username
 
-ROS_DISTRO = $'kinetic'
-git_username = $'Mayankm96'
-git_email_id = $'mayankmittal155@gmail.com'
+echo -e "Enter your github email.id: "
+read git_email_id
 
+ROS_DISTRO = "kinetic"
+
+# Blank Line
 echo $'\n'
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+echo $'\n'
+
+echo "Thank you for entering your information!" $'\n'
+read -p "Press enter to continue: "
+
+# Blank Line
+echo $'\n'
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+echo $'\n'
+
 STR=$'WARNING: This script is meant for Ubuntu 16.04.2LTS. In case you are using any other OS, the script would not work properly and there might be dependancies issues.'
 echo "$STR" $'\n'
+
+# Blank Line
+echo $'\n'
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+echo $'\n'
 
 sudo apt-get update
 
