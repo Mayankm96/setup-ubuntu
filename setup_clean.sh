@@ -14,7 +14,7 @@ read git_username
 echo -e "Enter your github email.id: "
 read git_email_id
 
-ROS_DISTRO = "kinetic"
+ROS_DISTRO="kinetic"
 
 # Blank Line
 blank_line
