@@ -43,7 +43,7 @@ blank_line
 # setup oh-my-zsh
 echo "Installing oh-my-zsh (https://github.com/robbyrussell/oh-my-zsh)" $'\n'
 sudo apt-get install zsh -y
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed "s/env zsh//g")"
 chsh -s $(which zsh)
 
 # Blank Line
