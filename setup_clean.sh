@@ -87,6 +87,7 @@ echo "Installing Arduino and rosserial-arduino" $'\n'
 sudo apt-get install arduino -y
 
 # setup rosserial arduino
+sudo apt-get install ros-kinetic-rosserial-arduino -y
 source /opt/ros/$ROS_DISTRO/setup.bash
 mkdir -p ~/sketchbook/libraries
 cd ~/sketchbook/libraries
@@ -119,7 +120,7 @@ sudo apt-get install python-pip -y
 # Blank Line
 blank_line
 
-# setup Chromium 
+# setup Chromium
 echo "Installing Chromium Browser" $'\n'
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
