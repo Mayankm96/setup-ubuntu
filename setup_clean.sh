@@ -124,6 +124,7 @@ blank_line
 echo "Installing Chromium Browser" $'\n'
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm -rf google-chrome-stable_current_amd64.deb
 
 echo "In case an error is encountered in above step, run `sudo apt-get -f install`"
 
