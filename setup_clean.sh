@@ -1,12 +1,11 @@
 #!/bin/bash
 
 function blank_line {
-	echo $'\n'
 	printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
 	echo $'\n'
 }
 
-# A script made to install all the packages and softwares, frequently required after a clean install of Ubuntu OS. 
+# A script made to install all the packages and softwares, frequently required after a clean install of Ubuntu OS.
 
 echo -e "Enter your github user.name: "
 read git_username
@@ -60,7 +59,7 @@ blank_line
 # setup atom-text-editor
 echo "Installing Atom Text Editor" $'\n'
 sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-get update 
+sudo apt-get update
 sudo apt install atom -y
 
 # setup Terminator
@@ -74,17 +73,7 @@ blank_line
 
 # setup ROS
 echo "Installing ROS ${ROS_DISTRO}" $'\n'
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
-sudo apt-get update
-sudo apt-get install ros-${ROS_DISTRO}-desktop-full -y
-sudo rosdep init
-rosdep update
-echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-echo "source /opt/ros/${ROS_DISTRO}/setup.zsh" >> ~/.zshrc
-source ~/.zshrc
-sudo apt-get install python-rosinstall -y
+./install_ROS.sh ${ROS_DISTRO}
 
 # Blank Line
 blank_line

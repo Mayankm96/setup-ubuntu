@@ -18,5 +18,5 @@ A short shell script to install all the softwares and packages frequently requir
 2. Open a terminal (`ctrl + alt + T`) and type `gedit /path/to/setup_clean.sh`
 3. Edit the inital three parameters for your distribution. These are for the ROS distribution you want to install along with your username and email ID required to configure your GitHub account
 4. Once done, close the text editor
-5. On the terminal, execute the command `chmod +x /path/to/setup_clean.sh`
-6. After that, execute the command `./path/to/setup_clean.sh`
+5. On the terminal, execute the command `cd /path/to/setup_clean.sh && chmod +x *.sh`
+6. After that, execute the command `./setup_clean.sh` to install all the above mentioned softwares
