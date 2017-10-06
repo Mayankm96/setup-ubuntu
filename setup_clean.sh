@@ -119,8 +119,8 @@ sudo apt-get install python-pip -y
 # Blank Line
 blank_line
 
-# setup google chrome
-echo "Installing Google Chrome" $'\n'
+# setup Chromium 
+echo "Installing Chromium Browser" $'\n'
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
