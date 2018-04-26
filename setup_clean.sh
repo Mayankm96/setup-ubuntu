@@ -76,12 +76,19 @@ blank_line
 echo "Installing ROS ${ROS_DISTRO}" $'\n'
 ./install_ROS.sh ${ROS_DISTRO}
 
-# Blank Line
-blank_line
+## Blank Line
+# blank_line
 
-# setup Gazebo
-echo "Installing Gazebo" $'\n'
-curl -ssL http://get.gazebosim.org | sh
+# ## setup OpenCV 3.2.0
+# echo "Installing OpenCV 3.2.0" $'\n'
+# ./install_openCV.sh
+
+## Blank Line
+# blank_line
+
+# ## setup Gazebo
+# echo "Installing Gazebo" $'\n'
+# curl -ssL http://get.gazebosim.org | sh
 
 # setup arduino
 echo "Installing Arduino and rosserial-arduino" $'\n'
@@ -103,13 +110,6 @@ echo "Installing git" $'\n'
 sudo apt-get install git -y
 git config --global user.name "$git_username"
 git config --global user.email "$git_email_id"
-
-# Blank Line
-blank_line
-
-# setup OpenCV 3.2.0
-echo "Installing OpenCV 3.2.0" $'\n'
-./install_openCV.sh
 
 # Blank Line
 blank_line
